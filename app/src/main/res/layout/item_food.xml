@@ -52,7 +52,7 @@
             android:text="@string/price_food" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/ivAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtPriceFood"
