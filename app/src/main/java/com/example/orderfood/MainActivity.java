@@ -14,7 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toolbar;
 
-import com.example.orderfood.databinding.ActivityMainBinding;
+//import com.example.orderfood.databinding.ActivityMainBinding;
 
 import com.example.orderfood.food.adapter.FoodAdapter;
 import com.example.orderfood.food.model.Food;
@@ -27,7 +27,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
+//    private ActivityMainBinding binding;
 
     RecyclerView foodRecycleView;
     FoodAdapter foodAdapter;
