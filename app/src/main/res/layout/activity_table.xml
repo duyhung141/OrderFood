@@ -14,12 +14,13 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical">
+
         <ImageView
-            android:src="@drawable/mulord"
-            android:scaleType="center"
             android:id="@+id/ivTableImg"
             android:layout_width="match_parent"
-            android:layout_height="125dp"/>
+            android:layout_height="150dp"
+            android:scaleType="center"
+            android:src="@drawable/mulord1" />
         <TextView
             android:textColor="@color/black"
             android:padding="5dp"
