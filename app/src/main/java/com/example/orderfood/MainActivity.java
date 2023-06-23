@@ -1,6 +1,7 @@
 package com.example.orderfood;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -39,9 +40,17 @@ public class MainActivity extends AppCompatActivity {
             foods.add(f);
         }
         foodAdapter = new FoodAdapter(foods, this);
-        LinearLayoutManager llm = new LinearLayoutManager(this);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
+
+//        LinearLayoutManager llm = new LinearLayoutManager(this);
         foodRecycleView.setAdapter(foodAdapter);
-        foodRecycleView.setLayoutManager(llm);
+        foodRecycleView.setLayoutManager(gridLayoutManager);
+
+//        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 2);
+//        rvProduct.setLayoutManager(mLayoutManager);
+//
+//        ProductsAdapter rvAdapter  = new ProductsAdapter(this, this.productRepository.getProductList());
+//        rvProduct.setAdapter(rvAdapter);
     }
     public Uri getUri (int resId){
         return Uri.parse("android.resource://"  + this.getPackageName().toString() + "/" + resId);

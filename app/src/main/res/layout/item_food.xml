@@ -6,16 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    android:layout_marginStart="5dp"
-    android:padding="5dp"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="8dp"
     app:cardElevation="8dp"
     app:cardMaxElevation="10dp"
     app:cardPreventCornerOverlap="true"
     app:cardUseCompatPadding="true"
-    tools:cardElevation="8dp"
-    tools:cardMaxElevation="10dp">
+    >
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -31,7 +28,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:padding="5dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:src="@drawable/food" />
 
         <TextView
             android:id="@+id/txtNameFood"
@@ -39,26 +36,31 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/idFoodImage"
             android:layout_marginTop="10dp"
-            android:text="@string/name_food" />
+            android:layout_marginStart="10dp"
+            android:text="@string/name_food"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/txtPriceFood"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtNameFood"
-            android:layout_alignStart="@+id/idFoodImage"
+            android:layout_alignLeft="@+id/idFoodImage"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
+            android:drawablePadding="2dp"
             android:text="@string/price_food" />
 
         <ImageView
             android:id="@+id/ivAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_below="@+id/txtPriceFood"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="10dp"
-            app:srcCompat="@drawable/add_24" />
+            android:layout_marginStart="10dp"
+            android:drawablePadding="2dp"
+            android:src="@drawable/add_24" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
