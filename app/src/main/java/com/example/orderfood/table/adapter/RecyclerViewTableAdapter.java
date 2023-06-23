@@ -1,4 +1,4 @@
-package com.example.orderfood.table;
+package com.example.orderfood.table.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,15 +11,23 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.orderfood.MainActivity;
 import com.example.orderfood.R;
+import com.example.orderfood.table.model.Table;
 
 import java.util.List;
 
 public class RecyclerViewTableAdapter extends RecyclerView.Adapter<RecyclerViewTableAdapter.MyViewHolder> {
-    private MainActivity getActivity;
     private List<Table> tableList;
+    private OnItemClickListener onItemClickListener;
 
-    public RecyclerViewTableAdapter(MainActivity activity, List<Table> tables) {
-        getActivity = activity;
+    public interface OnItemClickListener {
+        void onItemClick(Table table);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.onItemClickListener = listener;
+    }
+
+    public RecyclerViewTableAdapter(MainActivity mainActivity, List<Table> tables) {
         tableList = tables;
     }
 
@@ -33,6 +41,17 @@ public class RecyclerViewTableAdapter extends RecyclerView.Adapter<RecyclerViewT
             cardView = view.findViewById(R.id.cardView);
             tvTableTitle = view.findViewById(R.id.tvTableTitle);
             ivTableImg = view.findViewById(R.id.ivTableImg);
+
+            ivTableImg.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION && onItemClickListener != null) {
+                        onItemClickListener.onItemClick(tableList.get(position));
+                    }
+                }
+            });
+
         }
 
     }
@@ -44,7 +63,7 @@ public class RecyclerViewTableAdapter extends RecyclerView.Adapter<RecyclerViewT
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder,  int position) {
+    public void onBindViewHolder(MyViewHolder holder, int position) {
         Table table = tableList.get(position);
         holder.tvTableTitle.setText(table.getTitle());
         holder.ivTableImg.setImageResource(table.getImage());
@@ -52,28 +71,13 @@ public class RecyclerViewTableAdapter extends RecyclerView.Adapter<RecyclerViewT
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                // Thực hiện sự kiện khi click vào CardView nếu cần
             }
         });
     }
-//    public void onBindViewHolder(@NonNull FoodAdapter.ViewHolder holder, int position) {
-//        final  Food f = foods.get(position);
-//        String sFoodName = f.getName();
-//        holder.txtFoodName.setText(sFoodName);
-//        holder.txtPrice.setText(""+f.getPrice());
-//        holder.idFoodImage.setImageURI(f.getImage());
-//
-////        holder.ivAdd.setOnClickListener(new View.OnClickListener() {
-////            @Override
-////            public void onClick(View view) {
-////                addButtonClick(view, p);
-////            }
-////        });
-//    }
 
     @Override
     public int getItemCount() {
         return tableList.size();
     }
-
 }

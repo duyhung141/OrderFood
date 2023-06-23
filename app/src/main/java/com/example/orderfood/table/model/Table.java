@@ -1,4 +1,4 @@
-package com.example.orderfood.table;
+package com.example.orderfood.table.model;
 
 public class Table {
     private String title;
