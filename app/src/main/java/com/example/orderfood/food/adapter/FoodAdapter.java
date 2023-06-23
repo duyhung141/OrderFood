@@ -43,7 +43,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder>{
         String sFoodName = f.getName();
         holder.txtFoodName.setText(sFoodName);
         holder.txtPrice.setText(""+f.getPrice());
-        holder.idIVSSImage.setImageURI(f.getImage());
+        holder.idFoodImage.setImageURI(f.getImage());
 
 //        holder.ivAdd.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -70,13 +70,13 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder>{
         public RelativeLayout relativeLayout;
 
         public ImageView ivAdd;
-        public ImageView idIVSSImage;
+        public ImageView idFoodImage;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             this.txtFoodName = (TextView)itemView.findViewById(R.id.txtNameFood);
             this.txtPrice = (TextView)itemView.findViewById(R.id.txtPriceFood);
             this.ivAdd = (ImageView)itemView.findViewById(R.id.ivAdd);
-//            this.idIVSSImage = (ImageView)itemView.findViewById(R.id.idIVSSImage);
+            this.idFoodImage = (ImageView)itemView.findViewById(R.id.idFoodImage);
             this.relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayout);
 
         }
