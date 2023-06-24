@@ -14,17 +14,21 @@ import android.widget.Toast;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.caolambaokhanh.DAO.BanAnDAO;
-import com.caolambaokhanh.DAO.GoiMonDAO;
-import com.caolambaokhanh.DAO.LoaiMonAnDAO;
-import com.caolambaokhanh.DTO.BanAnDTO;
-import com.caolambaokhanh.DTO.GoiMonDTO;
-import com.caolambaokhanh.DTO.LoaiMonAnDTO;
-import com.caolambaokhanh.DTO.ThanhToanDTO;
-import com.caolambaokhanh.Fragment.HienThiThucDonFragment;
-import com.caolambaokhanh.orderfood.R;
-import com.caolambaokhanh.orderfood.ThanhToanActivity;
-import com.caolambaokhanh.orderfood.TrangChuActivity;
+//import com.caolambaokhanh.DAO.BanAnDAO;
+//import com.caolambaokhanh.DAO.GoiMonDAO;
+//import com.caolambaokhanh.DAO.LoaiMonAnDAO;
+//import com.caolambaokhanh.DTO.BanAnDTO;
+//import com.caolambaokhanh.DTO.GoiMonDTO;
+//import com.caolambaokhanh.DTO.LoaiMonAnDTO;
+//import com.caolambaokhanh.DTO.ThanhToanDTO;
+//import com.caolambaokhanh.Fragment.HienThiThucDonFragment;
+//import com.caolambaokhanh.orderfood.R;
+//import com.caolambaokhanh.orderfood.ThanhToanActivity;
+//import com.caolambaokhanh.orderfood.TrangChuActivity;
+
+import com.example.orderfood.DAO.BanAnDAO;
+import com.example.orderfood.DTO.BanAnDTO;
+import com.example.orderfood.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
