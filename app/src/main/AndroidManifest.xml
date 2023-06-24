@@ -31,6 +31,10 @@
         <activity
             android:name=".ForgotPassword"
             android:exported="true" />
+        <activity
+            android:name=".FoodActivity"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>
