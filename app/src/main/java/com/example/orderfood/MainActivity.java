@@ -37,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewTable
         recyclerView.setAdapter(recyclerViewTableAdapter);
 
         recyclerViewTableAdapter.setOnItemClickListener(this);
+//=======
+//        setContentView(R.layout.checkout_activity);
+//>>>>>>> origin/minhtuan
     }
 
     @Override

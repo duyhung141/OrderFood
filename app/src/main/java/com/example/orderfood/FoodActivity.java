@@ -36,7 +36,6 @@ public class FoodActivity extends AppCompatActivity {
     public FoodActivity() {
     }
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
